@@ -1,0 +1,9 @@
+/*====ヘッダー====*/
+.navbar{
+    background-color: #555555;    
+}
+
+.navbar-brand{
+    text-decoration: none !important;
+    color: white !important;    
+}

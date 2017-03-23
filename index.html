@@ -3,44 +3,168 @@
 
 <head>
     <!-- ふぁびこん -->
-    <link href="img/favicon.ico" rel="shortcut icon" /> 
-    <link href="img/favicon.ico" rel="apple-touch-icon" >
-
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <link href="img/favicon.ico" rel="apple-touch-icon">
+    <!--Import Bootstrap.css-->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/propeller.min.css" media="screen,projection" />
+    <!--Import index.css-->
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body class="teal grey-text text-lighten-4">
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+<body>
+    <!-- Basic sidebar -->
 
-    <div class="main-content container">
-        <h1>unikko</h1>
-        <h2>unikko</h2>
-        <h3>unikko</h3>
-        <h4>unikko</h4>
-        <h5>unikko</h5>
-        <h6>unikko</h6>
-        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-        <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
-        <div class="fixed-action-btn horizontal">
-            <a class="btn-floating btn-large red">
-                <i class="large material-icons">mode_edit</i>
-            </a>
-            <ul>
-                <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-                <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-            </ul>
+    <!-- Nav menu -->
+    <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-top pmd-z-depth">
+        <div class="container-fluid">
+            <!-- Sidebar Toggle Button-->
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a>
+                <a class="navbar-brand" href="javascript:void(0);">すぐるぐるぐるの雑記</a>
+            </div>
+
+            <!-- Navbar Right icon -->
+            <div class="pmd-navbar-right-icon pull-right">
+                <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect"><i class="material-icons pmd-sm">search</i></a>
+                <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect topbar-toggle visible-xs-inline-block"
+                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="material-icons pmd-sm">more_vert</i></a>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <section id="pmd-main">
+        <!-- Left sidebar -->
+        <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-slide-push pmd-sidebar-left pmd-z-depth sidebar-hide-custom"
+            role="navigation" style="position: absolute;">
+            <ul class="nav pmd-sidebar-nav">
+                <!-- My Account -->
+                <li class="dropdown pmd-dropdown pmd-user-info">
+                    <a aria-expanded="false" data-sidebar="true" data-toggle="dropdown" class="btn-user dropdown-toggle media" href="javascript:void(0);">
+                        <div class="media-left">
+                            <img width="40" height="40" alt="avatar" src="img/profile.jpg">
+                        </div>
+                        <div class="media-body media-middle"><small>製作者</small><br>Suguruguruguru</div>
+                        <div class="media-right media-middle"><i class="material-icons pmd-sm">more_vert</i></div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">person</i> <span class="media-body">View Profile</span></a></li>
+                        <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">settings</i> <span class="media-body">Settings</span></a></li>
+                        <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">history</i> <span class="media-body">Logout</span></a></li>
+                    </ul>
+                </li>
+                <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">motorcycle</i> <span class="media-body">記事が並ぶらしい</span></a>                    </li>
+                <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">add_a_photo</i> <span class="media-body">記事が並ぶらしい</span></a>                    </li>
+                <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">camera_roll</i> <span class="media-body">記事が並ぶらしい</span></a>                    </li>
+            </ul>
+        </aside>
+
+        <!-- Content -->
+        <div class="pmd-content" id="content">
+            <h2 class="headline">左のメニューから記事に飛べるようになるらしい</h2>
+            <p>多分スニーカーの話とか、エフェクターを作るときのメモやれ記録やれを書いていく雑記になるのだろうけど、どのくらいのペースでやっていくのか、いつまで続くかは知らない。</p>
+            <p style="margin-bottom:0;">This is a kind of diary that I'll' show you something like Making Guitar FX, although no one knows whether these
+                last or when I get tired of create this page because of lack of time to write these down.<br><br></p>
+            <!--Accordion with icons -->
+            <div class="panel-group pmd-accordion" id="accordion3" role="tablist" aria-multiselectable="true">
+                <div class="panel">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3"
+                                data-expandable="false"><i class="material-icons pmd-sm pmd-accordion-icon-left">build</i> エフェクター制作の知識について <i class="material-icons md-dark pmd-sm pmd-accordion-arrow">keyboard_arrow_down</i></a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">私個人に関しては基本的に電気系の知識は全く無いので、もし自身で作業する場合は、全て自己責任で行ってください。エフェクターが動かない、音が思っていたものと違う、私の顔がキモイなどございましても、当方は一切責任を負いません。</div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3" aria-expanded="true" aria-controls="collapseOne3"
+                                data-expandable="false"><i class="material-icons pmd-sm pmd-accordion-icon-left">pets</i> スニーカーの知識について <i class="material-icons md-dark pmd-sm pmd-accordion-arrow">keyboard_arrow_down</i></a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">実はそんなに流行をおっかけている訳でもない。adidas、PUMA、New Balanceが多くてNikeは1足も持っていない。Y-3とかHYKEは欲しい言うてるだけで手が出ない。</div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" aria-expanded="false" aria-controls="collapseTwo3"
+                                data-expandable="false"><i class="material-icons pmd-sm pmd-accordion-icon-left">http</i> サイト制作の知識について <i class="material-icons md-dark pmd-sm pmd-accordion-arrow">keyboard_arrow_down</i></a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">外部ライブラリをぶち込まないとソワソワする。結果的にテンプレと似たサイトになるので、JSでちょこっと遊ばせるくらいしかできない。このアコーディオンも当然のようにコピペ。</div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapseFour3" aria-expanded="false" aria-controls="collapseThree3"
+                                data-expandable="false"><i class="material-icons pmd-sm pmd-accordion-icon-left">audiotrack</i> ギターの実力について <i class="material-icons md-dark pmd-sm pmd-accordion-arrow">keyboard_arrow_down</i></a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">制作にプレイアビリティは関係ない(気がする)。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Accordion with icons end -->
+
+            <!-- Primary button with ripple effect -->
+            <button class="btn pmd-ripple-effect btn-primary" type="button"> Primary </button>
+            <!-- Success raised button with ripple effect -->
+            <button class="btn pmd-btn-raised pmd-ripple-effect btn-success" type="button">Success</button>
+
+
+            <!--Two line list with icons -->
+            <ul class="list-group pmd-z-depth pmd-list pmd-card-list">
+                <li class="list-group-item">
+                    <i class="material-icons media-left media-middle">mood</i>
+
+                    <div class="media-body">
+                        <h3 class="list-group-item-heading">Two-line item</h3>
+                        <span class="list-group-item-text">Secondary text</span>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <i class="material-icons media-left media-middle">notifications</i>
+                    <div class="media-body">
+                        <h3 class="list-group-item-heading">Two-line item</h3>
+                        <span class="list-group-item-text">Secondary text</span>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <i class="material-icons media-left media-middle">share</i>
+                    <div class="media-body">
+                        <h3 class="list-group-item-heading">Two-line item</h3>
+                        <span class="list-group-item-text">Secondary text</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <div class="pmd-sidebar-overlay"></div>
+    </section>
+
+
+
+    <!--Import jQuery and another js files-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/propeller.min.js"></script>
 
 </body>
 
